@@ -1,22 +1,29 @@
-.imgHeaderMentions {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 40vh;
-    width: 100%;
-    background-size: cover;
-    background-image: url("../img/pexelsAmbiance.png");
-}
 
 .containerMentions {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
+    color: white;
 }
 
-.containerMentionsColRight {
+.containerAllSectionsMentionsLegales {
+    display: flex;
+}
+
+.containerMentionsLeft, .containerMentionsRight {
+    gap: 3em;
     display: flex;
     flex-direction: column;
-    gap: 3em;
+}
+
+
+@media (max-width: 991px) {
+    .containerAllSectionsMentionsLegales {
+        gap: 3em;
+        display: flex;
+        flex-direction: column;
+    }
+    .containerMentionsLeft {
+        flex-direction: row;
+    }
+    .containerMentionsRight {
+        text-align: center;
+    }
 }

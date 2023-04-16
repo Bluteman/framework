@@ -2,7 +2,6 @@
 
 namespace Controllers;
 
-
 use Attributes\DefaultEntity;
 use Attributes\TargetEntity;
 use Attributes\TargetRepository;
@@ -10,10 +9,7 @@ use Attributes\UsesEntity;
 
 abstract class AbstractController
 {
-
     protected $usesEntity = true;
-
-
     protected $repository;
 
     public function __construct()
@@ -32,7 +28,6 @@ abstract class AbstractController
 
         if(!empty($attributes)){
             return $attributes[0]->getArguments()["value"];
-
         }else{
             return true;
         }
@@ -55,9 +50,7 @@ abstract class AbstractController
         $repoName = $attributes[0]->getArguments()["repositoryName"];
 
         return new $repoName();
-
     }
-
 
     public function render($template, $data){
         return \App\View::render($template, $data);
@@ -65,14 +58,12 @@ abstract class AbstractController
     public function redirect(? array $params=null){
         return \App\Response::redirect($params);
     }
-
     public function getUser(){
         return \App\Session::getUser();
     }
     public function get(string $dataType, array $requestBodyParams){
         return \App\Request::get($dataType,$requestBodyParams);
     }
-
     public function post(string $dataType, array $requestBodyParams){
         return \App\Request::post($dataType,$requestBodyParams);
     }
@@ -85,5 +76,4 @@ abstract class AbstractController
     public function json($trucARenvoyerAuClient,?string $methodSpe = null){
         return \App\Response::json($trucARenvoyerAuClient, $methodSpe);
     }
-
 }

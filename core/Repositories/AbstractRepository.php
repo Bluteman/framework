@@ -8,13 +8,9 @@ use Database\PDOMySQL;
 
 abstract class AbstractRepository
 {
-
     protected $pdo;
-
     protected $targetEntity;
-
     protected string $tableName;
-
 
 
     public function __construct()
@@ -35,9 +31,6 @@ abstract class AbstractRepository
         $attributes = $reflect->getAttributes(TargetEntity::class);
 
        return $attributes[0]->getArguments()["entityName"];
-
-
-
     }
 
     protected function resolveTableName(){
@@ -48,9 +41,6 @@ abstract class AbstractRepository
         return $attributes[0]->getArguments()["name"];
 
     }
-
-
-
 
 ///////////////////////////////////////////////////////
 
@@ -73,8 +63,6 @@ abstract class AbstractRepository
         $item = $query->fetch();
         return $item;
     }
-
-
 
     public function delete(object $object){
         $query = $this->pdo->prepare("DELETE FROM $this->tableName WHERE id = :id") ;

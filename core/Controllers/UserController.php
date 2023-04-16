@@ -8,7 +8,7 @@ use Entity\User;
 #[DefaultEntity(entityName: User::class)]
 class UserController extends AbstractController
 {
-    /*
+
     public function register(){
 
         $username = null;
@@ -33,17 +33,15 @@ class UserController extends AbstractController
             return $this->redirect([
                 "type"=>"admin",
                 "action"=>"index",
-                "info"=>"votre compte à bien été créé",
-                "locomotive"=>false
+                "info"=>"votre compte à bien été créé"
             ]);
         }
 
         return $this->render("admin/register",[
             "pageTitle"=>"Inscription Administrateur",
-            "locomotive"=>false,
             "css" => "form"
         ]);
-    }*/
+    }
 
     public function signIn(){
         $username = null;
@@ -68,8 +66,7 @@ class UserController extends AbstractController
                 return $this->redirect([
                    "type"=>"user",
                    "action"=>"signin",
-                    "locomotive"=>false,
-                    "info"=>"username inconnu déso"
+                    "info"=>"username inconnu"
                 ]);
             }
 
@@ -80,7 +77,6 @@ class UserController extends AbstractController
                 return $this->redirect([
                     "type"=>"admin",
                     "action"=>"index",
-                    "locomotive"=>false,
                     "info"=> "bienvenue ".$user->getUsername()
                 ]);
 
@@ -88,14 +84,12 @@ class UserController extends AbstractController
             return $this->redirect([
                 "type"=>"user",
                 "action"=>"signin",
-                "info"=> "mauvais mot de passe",
-                "locomotive"=>false
+                "info"=> "mauvais mot de passe"
             ]);
         }
 
         return $this->render("admin/connect",[
             "pageTitle"=>"Connection Administrateur",
-            "locomotive"=>false,
             "css" => "form"
         ]);
     }

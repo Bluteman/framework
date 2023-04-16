@@ -6,19 +6,14 @@ namespace Database;
 
 class PDOMySQL
 {
-
-
     public static $currentPdo = null;
-
 
     public static function getPdo():\PDO
     {
-
         $adresseServeurMySQL = "localhost";
         $nomDeDatabase = "flore";
         $username = "flore";
         $password = "flore123";
-
 
        if(self::$currentPdo === null){
 
@@ -31,19 +26,6 @@ class PDOMySQL
                ]
            );
        }
-
-
-
-
         return self::$currentPdo;
     }
-
-
-
-
-
-
-
-
-
 }

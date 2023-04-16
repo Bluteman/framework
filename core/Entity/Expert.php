@@ -5,7 +5,6 @@ namespace Entity;
 use Attributes\Table;
 use Attributes\TargetRepository;
 use Repositories\ExpertRepository;
-use Repositories\ReseauxRepository;
 
 #[Table(name:"experts")]
 #[TargetRepository(repositoryName: ExpertRepository::class)]
@@ -88,15 +87,5 @@ class Expert extends AbstractEntity {
     public function setImg(string $img): void
     {
         $this->img = $img;
-    }
-
-    /**
-     * @return array $reseaux
-     */
-    public function getReseaux():array
-    {
-        $reseauxRepo = new ReseauxRepository();
-        $reseaux = $reseauxRepo->findAllByExpertId($this->id);
-        return $reseaux;
     }
 }

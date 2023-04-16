@@ -5,5 +5,4 @@ namespace Entity;
 abstract class AbstractEntity
 {
 
-
 }

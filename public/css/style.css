@@ -6,28 +6,28 @@
 }
 
 :root {
-    --rose: #EE396A;
-    --beige: #FFE5EC;
-    --blancBeige: #FFF9FB;
-    --gris: #3c414f;
-    --roseSang: #C4234F;
-    --white: #ffffff;
     --text-multiplier: 1;
     --icon-multiplier: 2;
+
+    --black: #000;
+    --white: #ffffff;
+    --grey: #808080FF;
+    --background: #0B111E;
 }
 
 body {
     display: flex;
-    flex-direction: column;
+    min-height: 100vh;
     overflow-x: hidden;
+    color: var(--white);
+    flex-direction: column;
     justify-content: space-between;
     font-family: 'Dosis', sans-serif;
-    background-color: grey;
-    min-height: 90vh;
+    background-color: var(--background);
 }
 
-.navbar {
-    background-color: var(--beige);
+.navbar, .footer {
+    background-color: rgba(128, 128, 128, 0);
 }
 
 .navbar{
@@ -35,43 +35,27 @@ body {
 }
 
 .nav-link {
-    font-size: 1.3em;
-    border-radius: 10px;
-    color: var(--rose);
+    color: var(--white);
 }
 .nav-link:hover {
-    color: var(--rose);
-    border-radius: 10px;
-    background-color: #f6d2dd;
+    color: var(--white);
 }
 
-#logo, #logoFooter {
-    height: 40px;
-    width: 100px;
-    background-image: url("../img/logoBarreNav.png");
-}
-#logoFooter {
-    background-image: url("../img/logoFooter.png");
+#logoNavBarre, #logoFooter {
+    text-align: center;
+    font-size: calc(2.5em * var(--text-multiplier));
 }
 
-.footer {
-    background-color: var(--gris);
-}
 .contenueFooter {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 .arboReseaux {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.imgIconTrustpilot {
-    height: 1em;
-    width: 1em;
-    background-image: url("https://companieslogo.com/img/orig/TRST.L-5ada9c92.png?t=1663382464");
 }
 
 .ul,li,a {
@@ -80,11 +64,15 @@ body {
     text-decoration: none;
 }
 
+.footer-link, .nav-link {
+    user-select: none;
+}
+
 .inputReseaux {
     height: 60px;
     width: 60px;
     border-radius: 50%;
-    background-color: var(--blancBeige);
+    background-color: #1b2042;
 }
 
 .bi-linkedin {
@@ -95,23 +83,47 @@ body {
     height: 30px;
 }
 
-
-h1 {
-    font-size: calc(3em * var(--text-multiplier));
-}
-h2, .punchline {
-    font-size: calc(2em * var(--text-multiplier));
-}
-h3 {
-    font-size: calc(1.5em * var(--text-multiplier));
-}
-h4 {
-    font-size: calc(1.3em * var(--text-multiplier));
-}
-
+/*#  TAILLE POLICE #*/
 .icon {
     font-size: calc(1em * var(--icon-multiplier));
 }
+/**/
+.punchline {
+    display: flex;
+    font-size: 4em;
+}
+h1 {
+    font-size: calc(3em * var(--text-multiplier));
+}
+h2 {
+    font-size: calc(2.5em * var(--text-multiplier));
+}
+h3 {
+    font-size: calc(2.1em * var(--text-multiplier));
+}
+h4 {
+    font-size: calc(1.8em * var(--text-multiplier));
+}
+h5 {
+    font-size: calc(1.5em * var(--text-multiplier));
+}
+h6 {
+    font-size: calc(1.3em * var(--text-multiplier));
+}
+p {
+    font-size: calc(1.2em * var(--text-multiplier));
+}
+/**/
+.footer-link {
+    font-size: calc(1em * var(--text-multiplier));
+}
+.txtFooterLink {
+    font-size: calc(1em * var(--text-multiplier));
+}
+.nav-link {
+    font-size: calc(1.3em * var(--text-multiplier));
+}
+/**/
 
 .imgBase {
     background-size: contain;
@@ -119,111 +131,92 @@ h4 {
     background-repeat: no-repeat;
 }
 
+.imgProfil {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: var(--grey);
+}
+
 .div50Largeur {
     width: 50%;
 }
 
-.btn {
-    font-weight: bolder;
-}
 
-/* BOUTON 1 */
-.btn-rose
-{
-    padding: .5em 2em;
-    text-align: center;
+/*####  BTN BASE  ####*/
+.btn {
+    margin: 1em;
     color: var(--white);
-    border-radius: 25px;
-    font-size: 1.2rem;
-    background-color: var(--rose);
-    transition: .5s;
+    font-weight: bolder;
+    border: 1px solid var(--white);
+    font-size: calc(1.3em * var(--text-multiplier));
 }
-.btn-rose:hover
-{
-    color: var(--rose);
-    border: 1px solid var(--rose);
+.btn:hover {
+    color: var(--background);
     background-color: var(--white);
 }
+/***************************/
+/* BOUTON 1 */
+.btn-white {
+    color: var(--white);
+    border: 1px solid var(--white);
+    transition: 0.5s;
+}
+.btn-white:hover {
+    color: var(--background);
+    border: 1px solid var(--white);
+    background-color: var(--white);
+}
+/**/
 
 /* BOUTON 2 */
-.btn-blanc {
-    padding: .5em 2em;
-    text-align: center;
-    color: var(--rose);
-    border-radius: 25px;
-    font-size: 1.2rem;
-    background-color: var(--white);
-    transition: .5s;
-}
-.btn-blanc:hover
-{
-    color: var(--rose);
-    border: 1px solid var(--rose);
-    background-color: var(--white);
-}
+/**/
+/*##########################*/
 
+/*#  BASE HTML  #*/
 .containerCreateElement {
     min-height: 90vh;
 }
-/**/
+/*#  FIN BASE HTML  #*/
 
 @media (max-width: 991px) {
     :root {
         --text-multiplier: 2;
         --icon-multiplier: 4;
     }
-
-    .footer-link {
-        font-size: calc(1.3em * var(--text-multiplier));
-    }
-    .txtFooterLink {
-        font-size: 1.6em;
-    }
-
-    .nav-link {
-        font-size: calc(1.5em * var(--text-multiplier));
-    }
-
     #logo, #logoFooter {
-        height: 200px;
         width: 200px;
+        height: 200px;
     }
-
-    .inputReseaux {
-        height: 120px;
-        width: 120px;
-    }
-
-    .bi-linkedin {
-        height: 50px;
-    }
-
-    .contenueFooter {
-        margin: 2em 0;
-        flex-direction: column;
-        gap: 70px;
-    }
-
-    .logo, .navbar-toggler {
+    #logoNavBarre, .navbar-toggler {
         font-size: 4em;
     }
-
-    .arboReseaux, .reseaux, .logoFooter {
+    .contenueFooter {
+        gap: 70px;
+        margin: 2em 0;
+        flex-direction: column;
+    }
+    .arboReseaux, .reseaux {
         width: 80%;
         justify-content: space-around;
     }
-
+    .inputReseaux {
+        width: 120px;
+        height: 120px;
+    }
+    .bi-linkedin {
+        height: 50px;
+    }
+    .punchline {
+        display: none;
+        font-size: 8em;
+        text-align: center;
+    }
     .reseauLinkedIn {
         margin-right: 50px;
     }
-
-    .btn {
-        font-size: 2em;
-    }
-
     .div50Largeur {
         width: 100%;
     }
-
     /* FIN BASE HTML */
 }
