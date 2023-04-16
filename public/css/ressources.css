@@ -1,0 +1,278 @@
+
+.imgHomePageRessourcesAmbiance {
+    height: 60vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../img/pexelsAmbiance.png");
+}
+
+.contenueHomePageRessources {
+    height: 45vh;
+    padding: 2em 0;
+}
+
+.soulignementTxt {
+    height: 5px;
+    width: 150px;
+    background-color: var(--beige);
+}
+
+
+/* BOUTON Toggle Outils / Experts HomePageRessources */
+.buttonToggleHomePageRessources {
+    background-color: var(--beige);
+    width: 100px;
+    height: 40px;
+    border-radius: 200px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s;
+}
+.buttonToggleHomePageRessources::before {
+    position: absolute;
+    content: '';
+    background-color: #EE396AFF;
+    width: 30px;
+    height: 30px;
+    border-radius: 200px;
+    margin: 5px;
+    transition: 0.3s;
+}
+input:checked + .buttonToggleHomePageRessources {
+    background-color: var(--beige);
+}
+input:checked + .buttonToggleHomePageRessources::before {
+    transform: translateX(60px);
+}
+input {
+    display: none;
+}
+.txtExpertsHomePageRessources, txtOutilsHomePageRessources {
+    transition: 0.3s;
+}
+.txtActiveToggleButton {
+    color: var(--rose);
+}
+/* FIN BOUTON Toggle Outils / Experts HomePageRessources */
+
+.zoneTxtIntroPageRessources {
+    position: absolute;
+    top: -130px;
+    height: auto;
+    width: 100%;
+    padding: 2em 0;
+    background-color: var(--beige);
+    border-radius: 25px;
+}
+
+.ZoneContentIntroPageRessources {
+    background-color: var(--white);
+    margin-top: 3em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    gap: 20px;
+}
+
+.containerOutils, .containerExperts, .txtExplicatifTemplateOutils, .txtExplicatifTemplateExperts {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+.containerExperts {
+    margin-top: 10em;
+}
+
+.containerOutils {
+    margin-top: 4em;
+}
+
+.carteLogicielRight, .carteLogicielLeft {
+    position: relative;
+    border-radius: 25px;
+    background-color: var(--blancBeige);
+    padding: 1em;
+}
+
+.carteLogicielLeft {
+    background-color: var(--white);
+}
+.carteLogicielLeft>* {
+    text-align: end;
+}
+
+.decoSectionOutilsPageRessourcesArrow1, .decoSectionOutilsPageRessourcesArrow2 {
+    height: 200px;
+    width: 200px;
+    z-index: 2;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../img/decoArrow1.png");
+}
+
+.decoSectionOutilsPageRessourcesArrow1 {
+    top: 12vh;
+    left: 141vh;
+}
+
+.decoSectionOutilsPageRessourcesArrow2 {
+    top: 50px;
+    left: -120px;
+    background-image: url("../img/decoArrow2.png");
+}
+
+.titreLogiciel {
+    padding: .7em;
+    font-size: 1.5em;
+    color: var(--rose);
+    border-radius: 15px;
+    background-color: var(--beige);
+    display: inline-block;
+}
+
+.inputLogoLogiciel {
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    background-color: var(--white);
+}
+
+.btn-essayerLogiciel {
+    border-radius: 25px;
+    color: var(--blancBeige);
+    background-color: var(--rose);
+    transition: 0.5s;
+}
+.btn-essayerLogiciel:hover {
+    color: var(--rose);
+    border: 1px solid var(--rose);
+}
+
+.imgLogo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.carteProfessionnelLeft, .carteProfessionnelRight {
+    border-radius: 25px;
+    background-color: var(--white);
+    padding: 1em;
+}
+
+.carteProfessionnelRight {
+    background-color: var(--blancBeige);
+}
+
+.nomProfessionnel {
+    text-align: center;
+    font-size: calc(2em * var(--text-multiplier));
+    padding: .7em;
+    color: var(--rose);
+    display: inline-block;
+}
+
+.metierProfessionnel, .descriptionProfessionnelRight, .descriptionProfessionnelLeft {
+    color: var(--gris);
+    text-align: end;
+}
+.txtContentExpertRight {
+    text-align: end;
+}
+.txtContentExpertLeft {
+    text-align: start;
+}
+.inputImgProfessionnel {
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    background-color: var(--white);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.imgProfessionnel {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.imgPierreCauchois {
+    background-image: url("../img/imgCanva.png");
+}
+.imgJulienParadis {
+    background-image: url("../img/imgLearnyBox.png");
+}
+
+
+@media (max-width: 990px) {
+    .decoSectionOutilsPageRessourcesArrow1 {
+        top: 5vh;
+        left: 34vh;
+    }
+    .carteLogicielRight, .carteLogicielLeft {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 1em;
+    }
+    .carteLogicielLeft {
+        flex-direction: column;
+    }
+    .carteLogicielLeft>* {
+        font-size: 2.5em;
+        text-align: center;
+    }
+    .carteLogicielRight>* {
+        font-size: 2.5em;
+        text-align: center;
+    }
+    .zoneContentIntroPageRessources {
+        margin-top: 15em;
+    }
+    .zoneTxtIntroPageRessources {
+        top: -300px;
+    }
+    .titreLogiciel {
+        text-align: center;
+        display: block;
+    }
+    .imgLogo, .inputLogoLogiciel, .inputImgProfessionnel, .imgProfessionnel {
+        height: 360px;
+        width: 360px;
+    }
+    .containerExperts {
+        margin-top: 45em;
+    }
+    .margin-top-Expert {
+        margin-top: 37em;
+    }
+    .carteProfessionnelLeft {
+        flex-direction: column;
+    }
+    .carteProfessionnelRight {
+        flex-direction: column-reverse;
+    }
+    .txtContentExpertRight, .txtContentExpertLeft {
+        text-align: center;
+    }
+    .descriptionProfessionnel {
+        font-size: 2em;
+        text-align: center;
+    }
+
+    .btn-externe-experts {
+        font-size: 2.5em;
+    }
+}

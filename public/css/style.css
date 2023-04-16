@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --rose: #EE396A;
+    --beige: #FFE5EC;
+    --blancBeige: #FFF9FB;
+    --gris: #3c414f;
+    --roseSang: #C4234F;
+    --white: #ffffff;
+    --text-multiplier: 1;
+    --icon-multiplier: 2;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    justify-content: space-between;
+    font-family: 'Dosis', sans-serif;
+    background-color: grey;
+    min-height: 90vh;
+}
+
+.navbar {
+    background-color: var(--beige);
+}
+
+.navbar{
+    --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.nav-link {
+    font-size: 1.3em;
+    border-radius: 10px;
+    color: var(--rose);
+}
+.nav-link:hover {
+    color: var(--rose);
+    border-radius: 10px;
+    background-color: #f6d2dd;
+}
+
+#logo, #logoFooter {
+    height: 40px;
+    width: 100px;
+    background-image: url("../img/logoBarreNav.png");
+}
+#logoFooter {
+    background-image: url("../img/logoFooter.png");
+}
+
+.footer {
+    background-color: var(--gris);
+}
+.contenueFooter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.arboReseaux {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.imgIconTrustpilot {
+    height: 1em;
+    width: 1em;
+    background-image: url("https://companieslogo.com/img/orig/TRST.L-5ada9c92.png?t=1663382464");
+}
+
+.ul,li,a {
+    color: var(--white);
+    list-style: none;
+    text-decoration: none;
+}
+
+.inputReseaux {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: var(--blancBeige);
+}
+
+.bi-linkedin {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+}
+
+
+h1 {
+    font-size: calc(3em * var(--text-multiplier));
+}
+h2, .punchline {
+    font-size: calc(2em * var(--text-multiplier));
+}
+h3 {
+    font-size: calc(1.5em * var(--text-multiplier));
+}
+h4 {
+    font-size: calc(1.3em * var(--text-multiplier));
+}
+
+.icon {
+    font-size: calc(1em * var(--icon-multiplier));
+}
+
+.imgBase {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.div50Largeur {
+    width: 50%;
+}
+
+.btn {
+    font-weight: bolder;
+}
+
+/* BOUTON 1 */
+.btn-rose
+{
+    padding: .5em 2em;
+    text-align: center;
+    color: var(--white);
+    border-radius: 25px;
+    font-size: 1.2rem;
+    background-color: var(--rose);
+    transition: .5s;
+}
+.btn-rose:hover
+{
+    color: var(--rose);
+    border: 1px solid var(--rose);
+    background-color: var(--white);
+}
+
+/* BOUTON 2 */
+.btn-blanc {
+    padding: .5em 2em;
+    text-align: center;
+    color: var(--rose);
+    border-radius: 25px;
+    font-size: 1.2rem;
+    background-color: var(--white);
+    transition: .5s;
+}
+.btn-blanc:hover
+{
+    color: var(--rose);
+    border: 1px solid var(--rose);
+    background-color: var(--white);
+}
+
+.containerCreateElement {
+    min-height: 90vh;
+}
+/**/
+
+@media (max-width: 991px) {
+    :root {
+        --text-multiplier: 2;
+        --icon-multiplier: 4;
+    }
+
+    .footer-link {
+        font-size: calc(1.3em * var(--text-multiplier));
+    }
+    .txtFooterLink {
+        font-size: 1.6em;
+    }
+
+    .nav-link {
+        font-size: calc(1.5em * var(--text-multiplier));
+    }
+
+    #logo, #logoFooter {
+        height: 200px;
+        width: 200px;
+    }
+
+    .inputReseaux {
+        height: 120px;
+        width: 120px;
+    }
+
+    .bi-linkedin {
+        height: 50px;
+    }
+
+    .contenueFooter {
+        margin: 2em 0;
+        flex-direction: column;
+        gap: 70px;
+    }
+
+    .logo, .navbar-toggler {
+        font-size: 4em;
+    }
+
+    .arboReseaux, .reseaux, .logoFooter {
+        width: 80%;
+        justify-content: space-around;
+    }
+
+    .reseauLinkedIn {
+        margin-right: 50px;
+    }
+
+    .btn {
+        font-size: 2em;
+    }
+
+    .div50Largeur {
+        width: 100%;
+    }
+
+    /* FIN BASE HTML */
+}

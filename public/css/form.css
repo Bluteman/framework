@@ -1,0 +1,37 @@
+
+
+
+.containerForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    width: 80%;
+    padding: 3em;
+    margin: 3em;
+    border: 1px solid var(--rose);
+    border-radius: 15px;
+    background-color: var(--blancBeige);
+}
+
+form {
+    width: 80%;
+}
+
+.labelPSW, .labelName {
+    font-size: calc(1.3em * var(--text-multiplier));
+}
+
+@media (max-width: 991px) {
+    .containerForm {
+        min-height: 40vh;
+    }
+    form {
+        width: 100%;
+    }
+    input {
+        width: 80%;
+        height: 7em;
+        font-size: 5em;
+    }
+}

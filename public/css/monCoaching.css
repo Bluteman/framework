@@ -1,0 +1,444 @@
+
+.containerHeaderIMMF {
+    display: flex;
+    align-items: center;
+}
+
+.containerTitreHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 2em;
+}
+
+.homePageMonCoaching {
+    background-color: var(--blancBeige);
+}
+
+.imgIMakeMyFunnel {
+    width: 50%;
+    height: 100vh;
+    background-image: url("../img/imgIMakeMyFunnel.png");
+}
+
+.titreSection2MonCoaching {
+    text-align: center;
+    color: var(--gris);
+    width: 53%;
+}
+
+.imgChatGlass {
+    width: 700px;
+    height: 700px;
+    background-image: url("../img/chatGlass.png");
+}
+
+.containerCarteObjectifsMC {
+    display: flex;
+    gap: 2em;
+    flex-direction: column;
+}
+
+.carteObjectifsMC {
+    text-align: start;
+    width: 400px;
+    margin: 1em;
+    padding: 2em 1em;
+    border-radius: 15px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+    background-color: var(--blancBeige);
+}
+
+.carteObjectifsMCM-Left {
+    margin-left: 9em;
+}
+
+.imgCheckBox {
+    min-width: 70px;
+    min-height: 70px;
+    background-image: url("../img/checkbox.png");
+}
+
+.img3Cartes {
+    min-width: 700px;
+    min-height: 700px;
+    background-image: url("../img/PhotoDesign.png");
+}
+
+.titreSection4MC {
+    color: var(--rose);
+    font-size: calc(2.5em * var(--text-multiplier));
+}
+
+.titreSectionLifeMC {
+    color: var(--rose);
+}
+
+.containerCartesProgrammeHaut, .containerCartesProgrammeBas {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.containerCartesProgrammeBas {
+    justify-content: space-between;
+}
+
+.carteParcoursProgrammeSection4 {
+    flex-direction: column;
+    text-align: center;
+    max-width: 330px;
+}
+
+.titreOffreBackground, .titreOffreBackgroundRose {
+    display: inline-block;
+    color: #DB4B6C;
+    font-size: calc(1.6em * var(--text-multiplier));
+    padding: 0.5em;
+    border-radius: 15px;
+    background-color: #F8D4DE;
+}
+.titreOffreBackgroundRose {
+    color: var(--blancBeige);
+    background-color: var(--rose);
+}
+
+.containerContentSection3MC {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.containerContentSection4MC {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgParcoursProgramme {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-image: url("../img/parcoursProgramme.png");
+}
+
+.imgChatVolant {
+    margin-right: 1em;
+    width: 150px;
+    height: 150px;
+    background-image: url("../img/chatVolant.png");
+}
+
+.containerCarteProgrammeCoaching {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.carteProgrammeCoaching {
+    position: relative;
+    z-index: 2;
+    max-width: 400px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    padding: 3em;
+    background-color: var(--rose);
+    color: var(--beige);
+    border-radius: 15px;
+}
+
+.titreProgramme {
+    padding: .3em;
+    top: -20px;
+    left: calc(50% - 140px);
+    position: absolute;
+    color: var(--rose);
+    border-radius: 15px;
+    background-color: var(--blancBeige);
+}
+
+.imgStar {
+    position: absolute;
+    top: 35px;
+    left: 145px;
+    width: 300px;
+    height: 300px;
+    background-image: url("../img/star.png");
+}
+
+.imgArrowProgrammeCoaching {
+    position: absolute;
+    z-index: 1;
+    top: 403px;
+    left: 1140px;
+    width: 600px;
+    height: 600px;
+    background-image: url("../img/decoArrow2.png");
+    transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+}
+
+.containerInvestissement {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.carteInvestissement {
+    margin: 1em;
+    padding: 1em;
+    min-width: 250px;
+    color: var(--beige);
+    border-radius: 15px;
+    background-color: var(--rose);
+    opacity: 0.5;
+}
+
+.carteVersement {
+    color: var(--rose);
+    background-color: var(--beige);
+}
+
+.carteSelected {
+    opacity: 1;
+    font-size: 1.1em;
+}
+
+.tTC {
+    margin-bottom: 10px;
+    margin-left: 10px;
+    font-size: calc(.9em * var(--text-multiplier));
+}
+
+.imgChatBag {
+    position: absolute;
+    top: -10px;
+    left: 490px;
+    width: 300px;
+    height: 300px;
+    transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    background-image: url("../img/chatWithBag.png");
+}
+
+/* BOUTON Toggle 4 versements / 1 versement section 6 pageMC */
+.buttonToggleDecoInvestissement {
+    background-color: var(--beige);
+    width: 70px;
+    height: 30px;
+    border-radius: 200px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s;
+}
+.buttonToggleDecoInvestissement::before {
+    position: absolute;
+    content: '';
+    background-color: #EE396AFF;
+    width: 20px;
+    height: 20px;
+    border-radius: 200px;
+    margin: 5px;
+    transition: 0.3s;
+}
+input:checked + .buttonToggleDecoInvestissement {
+    background-color: var(--beige);
+}
+input:checked + .buttonToggleDecoInvestissement::before {
+    transform: translateX(40px);
+}
+input {
+    display: none;
+}
+
+.carousel-control-next-icon {
+    color: #C4234F;
+}
+.txt4VersementsPageMC, txt1VersementPageMC {
+    transition: 0.3s;
+}
+.txtActiveToggleButtonPageMC {
+    color: var(--rose);
+}
+/* FIN BOUTON Toggle 4 versements / 1 versement HomePageMC */
+
+.containerTemoignageMC {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.carteTemoignage {
+    width: 30em;
+    height: 23em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    background-color: var(--beige);
+}
+
+/* CARROUSEL */
+.carousel {
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+}
+.txtContentAvis {
+    width: 135%;
+    height: 8em;
+    color: var(--gris);
+    overflow: auto;
+}
+.carousel-inner {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.carousel-item {
+    height: 100%;
+    width: 100%;
+}
+.carousel-caption {
+    bottom: -2.75rem;
+}
+.imgProfil {
+    height: 6em;
+    width: 6em;
+    border-radius: 50%;
+    background-size: cover;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    padding: .2em;
+    border-radius: 25px;
+    background-color: #C4234F;
+}
+/* FIN CARROUSEL */
+
+
+
+.spanTitreSectionTemoignages {
+    font-size: 3em;
+}
+
+button.accordion-button.collapsed::after > * {
+    color: var(--rose);
+}
+
+@media (max-width: 991px) {
+    .containerHeaderIMMF {
+        flex-direction: column-reverse;
+    }
+    .imgIMakeMyFunnel {
+        height: 60vh;
+        width: 100%;
+    }
+    .containerTitreHeader {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .imgArrowProgrammeCoaching, .imgParcoursProgramme, .imgChatGlass, .imgStar, .imgChatBag {
+        display: none;
+    }
+    .containerInvestissement, .containerContentSection4MC, .containerCartesProgrammeHaut, .containerCartesProgrammeBas, .containerCarteProgrammeCoaching {
+        flex-direction: column;
+    }
+    .imgChatVolant {
+        height: 200px;
+        width: 200px;
+    }
+    .carteObjectifsMC {
+        width: 780px;
+    }
+    .carteObjectifsMCM-Left {
+        margin: 0px;
+    }
+    .changing-text {
+        font-size: 5em;
+    }
+    .titreSection2MonCoaching {
+        width: 95%;
+    }
+    .containerContentSection3MC {
+        text-align: center;
+        flex-direction: column;
+    }
+    .containerContentSection3MC>* {
+        text-align: center;
+        font-size: 2em;
+    }
+    .carteParcoursProgrammeSection4 {
+        max-width: 95%;
+    }
+    .titreSectionLifeMC {
+        text-align: center;
+    }
+    .carteParcoursProgrammeSection4>p {
+        font-size: 3em;
+    }
+    .carteParcoursProgrammeSection4>span {
+        display: block;
+    }
+    .containerCartesProgrammeHaut, .containerCartesProgrammeBas {
+        display: flex;
+        align-items: center;
+    }
+    .carteProgrammeCoaching {
+        max-width: 80%;
+        margin: 1em;
+    }
+    .txtExplicatifInvestissement, .txtExplicatifProgrammeCoaching, .carteProgrammeCoaching>* {
+        font-size: 2em;
+        text-align: center;
+    }
+    .containerButtonToggleVersement>* {
+        align-items: center;
+        font-size: 3em;
+    }
+    #containerToggleBouton {
+        margin: 3em;
+    }
+    .buttonToggleDecoInvestissement {
+        width: 220px;
+        height: 75px;
+    }
+    .buttonToggleDecoInvestissement::before {
+        width: 65px;
+        height: 65px;
+        margin: 10px;
+    }
+    input:checked + .buttonToggleDecoInvestissement::before {
+        transform: translateX(130px);
+    }
+    .containerTemoignageMC {
+        flex-direction: column;
+    }
+    .carteTemoignage {
+        width: 30em;
+        height: 26em;
+    }
+    .carousel-caption>* {
+        font-size: 1.2em;
+    }
+    .carousel-caption {
+        bottom: -8rem;
+    }
+    .imgProfil {
+        height: 5em;
+        width: 5em;
+    }
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+        font-size: 8em;
+    }
+    .containerTemoignageMC>* {
+        font-size: 2em;
+        text-align: center;
+        gap: 1em;
+    }
+    .accordion-body, .txtQuestion {
+        font-size: 2em;
+    }
+}

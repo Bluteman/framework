@@ -1,0 +1,22 @@
+.imgHeaderMentions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+    width: 100%;
+    background-size: cover;
+    background-image: url("../img/pexelsAmbiance.png");
+}
+
+.containerMentions {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.containerMentionsColRight {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
