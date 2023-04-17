@@ -23,10 +23,13 @@ form {
     background-color: var(--background);
 }
 
-
 .labelPSW, .labelName {
     font-size: calc(1.3em * var(--text-multiplier));
 }
+
+
+
+
 
 @media (max-width: 991px) {
     .containerForm {

@@ -48,7 +48,7 @@ class ExpertController extends AbstractController
 
         return $this->render("admin/create", [
             "pageTitle"=>"nouveau experts",
-            "selecteur"=>"expert"
+            "selecteur"=>"expert",
         ]);
     }
     public function remove() {
@@ -82,7 +82,8 @@ class ExpertController extends AbstractController
         if ($request){
             return $this->render("admin/update",[
                 "expert"=>$this->repository->findById($_GET["id"]),
-                "pageTitle"=>"update expert"]);
+                "pageTitle"=>"update expert",
+            ]);
         }
 
         $request = $this->post("form",[

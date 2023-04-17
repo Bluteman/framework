@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@800&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -174,9 +175,8 @@ p {
 /*##########################*/
 
 /*#  BASE HTML  #*/
-.containerCreateElement {
-    min-height: 90vh;
-}
+
+
 /*#  FIN BASE HTML  #*/
 
 @media (max-width: 991px) {

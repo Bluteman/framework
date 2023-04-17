@@ -14,4 +14,11 @@ class StaticController extends AbstractController
             "css" => "mentions",
         ]);
     }
+    public function erreurPage()
+    {
+        return $this->render("pages/erreur", [
+            "pageTitle" => "erreur",
+            "css" => "erreur",
+        ]);
+    }
 }
