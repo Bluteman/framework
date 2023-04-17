@@ -76,8 +76,6 @@ class ExpertController extends AbstractController
             "action"=>"index"
         ]);
     }
-
-
     public function update() {
         $request = $this->get("form",["id"=>"number"]);
 
@@ -94,7 +92,6 @@ class ExpertController extends AbstractController
             "profession"=>"text",
             "ancienneImage"=>"text"
         ]);
-        // post bool false pk ???
 
         if ($request){
             $expert = $this->repository->findById($request["idUpdate"]);

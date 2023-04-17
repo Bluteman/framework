@@ -4,7 +4,7 @@
 
 
 <div class="container-lg containerCreateElement pt-5 pb-5">
-    <a href="?type=admin&action=index" class="btn btn-outline-success">retour</a>
+    <a href="?type=admin&action=index" class="btn btn-outline-success"><i class="bi bi-arrow-left me-2"></i>retour</a>
     <div>
 
         <?php if($selecteur=="expert") : ?>
@@ -12,6 +12,7 @@
             <div class="pt-5 pb-5">
                 <div>
                     <h3 class="text-center">Ajout d'un nouveau expert</h3>
+                    <hr>
                 </div>
                 <form
                     enctype="multipart/form-data"

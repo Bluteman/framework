@@ -25,11 +25,15 @@
                 <div>
                     <?php foreach ($experts as $expert) { ?>
                         <div class="d-flex justify-content-between align-items-center border border-primary rounded m-2 p-3">
-                            <div>
-                                <h3><?= $expert->getName() ?></h3>
-                                <h3><?= $expert->getId() ?></h3>
+                            <div class="d-flex align-items-center text-center">
+                                <img class="imgProfil m-4" src="./img/<?= $expert->getImg() ?>" alt="image expert">
+                                <div>
+                                    <h3><?= $expert->getName() ?></h3>
+                                    <h3><?= $expert->getId() ?></h3>
+                                </div>
                             </div>
-                            <div class="d-flex flex-column">
+
+                            <div class="d-flex flex-column justify-content-around">
                                 <a class="d-flex align-items-center text-danger border rounded p-2  m-1" href="?type=expert&action=remove&id=<?= $expert->getId() ?>"><i class="bi bi-trash"></i></a>
                                 <a class="d-flex align-items-center text-warning border rounded p-2  m-1" href="?type=expert&action=update&id=<?= $expert->getId() ?>"><i class="bi bi-pencil"></i></a>
                             </div>
