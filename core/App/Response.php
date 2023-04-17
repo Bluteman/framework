@@ -4,7 +4,6 @@ namespace App;
 
 class Response
 {
-
     public static function redirect(? array $params = null){
 
         $url = "index.php";
@@ -16,18 +15,13 @@ class Response
             $url = "?";
 
             foreach ($params as $paramName=>$paramValue){
-
                 // type=posts&
                 $newParam = $paramName."=".$paramValue."&";
                 $url.=$newParam;
-
             }
-
         }
-
         header("Location: ${url}");
         exit();
-
     }
 
 
@@ -46,7 +40,6 @@ class Response
         if($methodeSpe == "put"){
             header('Access-Control-Allow-Methods: PUT');
         }
-
         echo json_encode($trucARenvoyerAuClient);
     }
 }

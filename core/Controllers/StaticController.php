@@ -2,9 +2,11 @@
 
 namespace Controllers;
 
+use Attributes\Route;
 use Attributes\UsesEntity;
 
 #[UsesEntity(value: False)]
+#[Route(url: "mentionsLegales", name: "mentionsLegales")]
 class StaticController extends AbstractController
 {
     public function showMentionsLegales()

@@ -59,7 +59,6 @@ class Request
             }else{
                 $requestParams = $_POST;
             }
-
         }
 
         $resultats = [];
@@ -76,18 +75,12 @@ class Request
                         $monNombre = htmlspecialchars($requestParams[$parametre]);
                         $resultats[$parametre] = (int)$monNombre;
                     }else {return false;}
-
-
                 }
-
 
             }else{ return false; }
         }
 
         if($resultats == []) return false;
         return $resultats;
-
-
-
     }
 }

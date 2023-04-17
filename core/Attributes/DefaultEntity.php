@@ -15,5 +15,4 @@ class DefaultEntity
     {
         $this->entityName = $entityName;
     }
-
 }

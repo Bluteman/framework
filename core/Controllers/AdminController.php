@@ -16,7 +16,6 @@ class AdminController extends AbstractController
         ]);
     }
 
-
     function register() {
         $this->render("users/signup",[
             "pageTitle"=>"Inscription Administrateur",

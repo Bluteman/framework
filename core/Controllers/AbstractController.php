@@ -20,7 +20,6 @@ abstract class AbstractController
             $this->repository = $this->getRepository($this->resolveDefaultEntityName());
         }
     }
-
     protected function resolveUsesEntity(){
         $reflect = new \ReflectionClass($this);  //$attributes
 
@@ -32,7 +31,6 @@ abstract class AbstractController
             return true;
         }
     }
-
     protected function resolveDefaultEntityName(){
         $reflect = new \ReflectionClass($this);  //$attributes
 
@@ -40,7 +38,6 @@ abstract class AbstractController
 
         return $attributes[0]->getArguments()["entityName"];
     }
-
     protected function getRepository($entityName){
 
         $reflect = new \ReflectionClass($entityName);  //$attributes
@@ -51,7 +48,6 @@ abstract class AbstractController
 
         return new $repoName();
     }
-
     public function render($template, $data){
         return \App\View::render($template, $data);
     }

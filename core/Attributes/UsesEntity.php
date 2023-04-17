@@ -13,5 +13,4 @@ class UsesEntity
     {
         $this->value = $value;
     }
-
 }

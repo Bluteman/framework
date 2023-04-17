@@ -2,21 +2,16 @@
 
 namespace App;
 
-
-class View {
-
+class View
+{
     public static function getInfo(){
-
         if(!empty($_GET['info'])){
             return $_GET['info'];
         }
-
     }
-
     public static function render($templateName, $data){
 
         extract($data);
-
 
             ob_start();
             require_once ("../templates/${templateName}.html.php");
@@ -29,25 +24,4 @@ class View {
 
             echo ob_get_clean();
     }
-
-    public static function renderTemplateBottom($templateName, $data){
-
-        extract($data);
-
-
-        ob_start();
-        require_once ("../templates/pages/templatesRessources/${templateName}.html.php");
-
-        $pageContent = ob_get_clean();
-
-        ob_start();
-
-        require_once ('../templates/base.html.php');
-
-        echo ob_get_clean();
-    }
-
-
-
-
 }

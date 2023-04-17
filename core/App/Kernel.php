@@ -4,16 +4,12 @@ namespace App;
 
 class Kernel
 {
-
-    public static function run(){
-
+    public static function run()
+    {
         \App\Session::start();
-
 
         $type = "advanced";
         $action = "index";
-
-
 
         if(!empty($_GET['type'])){ $type = $_GET['type']; };
         if(!empty($_GET['action'])){ $action = $_GET['action']; };
@@ -21,14 +17,8 @@ class Kernel
         $type = ucfirst($type);
         $controllerName = "\Controllers\\".$type."Controller";
 
-
         $controller = new $controllerName();
 
         $controller->$action();
-
-
-
-
-        }
-
+    }
 }
