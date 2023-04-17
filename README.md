@@ -2,6 +2,4 @@
 
 - /* améliorer design
 
-- / function update
-
 - / routes
