@@ -9,6 +9,8 @@
 Accueil :
 ![CaptureAccueil](https://user-images.githubusercontent.com/130739909/232434719-c9fd518d-87f8-4703-831d-7ce7babf771a.PNG)
 
+login / Register Page :
+
 AdminPage :
 ![CaptureAdminPage](https://user-images.githubusercontent.com/130739909/232434275-f679b600-188a-451a-8f83-e1cfe5c1c48a.PNG)
 
