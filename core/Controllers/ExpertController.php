@@ -92,7 +92,7 @@ class ExpertController extends AbstractController
             "name"=>"text",
             "content"=>"text",
             "profession"=>"text",
-            "image"=>"text"
+            "ancienneImage"=>"text"
         ]);
         // post bool false pk ???
 
@@ -105,13 +105,12 @@ class ExpertController extends AbstractController
                 ]);
             }
 
-            if ($request["idUpdate"] && $request["name"] && $request["content"] && $request["profession"] && $request["image"]){
+            if ($request["idUpdate"] && $request["name"] && $request["content"] && $request["profession"] && $request["ancienneImage"]){
 
-                $expert = new Expert();
-                $image = new File("img");
+                $image = new File("image");
 
                 if($image->isImage()){
-                    $image->upload($request["image"]);
+                    $image->upload();
                     $expert->setImg($image->getName());
                 }
 

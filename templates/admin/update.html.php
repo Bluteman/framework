@@ -13,15 +13,15 @@
                     <h3 class="text-center"><strong>Edit d'un expert</strong></h3>
                     <hr>
                 </div>
-                <form
-                    enctype="multipart/form-data"
-                    action="?type=expert&action=update&id=<?= $expert->getId() ?>"
-                    method="post"
-                    class="d-flex flex-column align-items-center">
-                    <!---->
+                <form enctype="multipart/form-data"
+                      action="?type=expert&action=update&id=<?= $expert->getId() ?>"
+                      method="post"
+                      class="d-flex flex-column align-items-center">
+                    <!--  -->
                     <img class="imgProfil m-4" src="./img/<?= $expert->getImg() ?>" alt="image expert">
 
                     <input type="hidden" name="idUpdate" value="<?= $expert->getId() ?>">
+                    <input type="hidden" name="ancienneImage" value="<?= $expert->getImg() ?>">
                     <input class="form-control mb-2 text-center" type="text" name="name" placeholder="name" value="<?= $expert->getName() ?>">
                     <input class="form-control mb-2 text-center" type="text" name="content" placeholder="content" value="<?= $expert->getContent() ?>">
                     <input class="form-control mb-2 text-center" type="text" name="profession" placeholder="profession" value="<?= $expert->getProfession() ?>">

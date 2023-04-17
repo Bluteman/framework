@@ -22,7 +22,7 @@ class ExpertRepository extends AbstractRepository
     }
 
     public function update(Expert $expert) {
-        $request = $this->pdo->prepare("UPDATE {$this->tableName} SET name = :name, content = :content, profession =:profession, img=:img WHERE id= :id");
+        $request = $this->pdo->prepare("UPDATE {$this->tableName} SET name = :name, content = :content, profession =:profession, img=:img WHERE id = :id");
         $request->execute([
             "id"=>$expert->getId(),
             "name"=>$expert->getName(),
