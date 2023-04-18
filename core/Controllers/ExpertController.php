@@ -10,7 +10,6 @@ use Entity\Expert;
 class ExpertController extends AbstractController
 {
     public function create() {
-
         $name = null;
         $content = null;
         $profession = null;
@@ -27,28 +26,123 @@ class ExpertController extends AbstractController
 
         if($name && $content && $profession){
 
-            $image = new File("img");
-            if($image->isImage()){
-                $image->upload();
+            $images = new File("img");
+            if($images->isImage()){
+                $images->upload();
             }
 
             $expert = new Expert();
             $expert->setName($name);
             $expert->setContent($content);
             $expert->setProfession($profession);
-            $expert->setImg($image->getName());
+            $expert->setImg($images->getName());
 
             $idExpert = $this->repository->insert($expert);
 
             return $this->redirect([
                 "type"=>"admin",
-                "action"=>"index"
+                "action"=>"index",
+                "locomotive"=>false
             ]);
         }
 
         return $this->render("admin/create", [
             "pageTitle"=>"nouveau experts",
             "selecteur"=>"expert",
+            "locomotive"=>false
+        ]);
+        /*
+        $request = $this->post("form",[
+            "idUpdate"=>"number",
+            "name"=>"text",
+            "content"=>"text",
+            "profession"=>"text",
+            "ancienneImage"=>"text"
+        ]);
+
+        if ($request) {
+            if ($request["name"] && $request["content"] && $request["profession"] && $request["ancienneImage"]){
+
+
+                $image = new File("image");
+                if($image->isImage()){
+                    $image->upload();
+                }
+
+                $expert = new Expert();
+                $expert->setName($request["name"]);
+                $expert->setContent($request["content"]);
+                $expert->setProfession($request["profession"]);
+                $expert->setImg($image->getName());
+
+                $this->repository->insert($expert);
+
+                return $this->redirect([
+                    "type"=>"admin",
+                    "action"=>"index"
+                ]);
+            }
+        }
+        return $this->render("admin/index", [
+            "pageTitle"=>"Index Administrateur",
+            "selecteur"=>"expert",
+        ]);
+        */
+    }
+    public function update() {
+        $request = $this->get("form",["id"=>"number"]);
+
+        if ($request){
+            return $this->render("admin/update",[
+                "expert"=>$this->repository->findById($_GET["id"]),
+                "pageTitle"=>"update expert",
+            ]);
+        }
+
+        $request = $this->post("form",[
+            "idUpdate"=>"number",
+            "name"=>"text",
+            "content"=>"text",
+            "profession"=>"text",
+            "ancienneImage"=>"text"
+        ]);
+
+        if ($request){
+
+            $expert = $this->repository->findById($request["idUpdate"]);
+
+            if (!$expert){
+                return $this->render("admin/index",[
+                    "pageTitle"=>"Index Administrateur"
+                ]);
+            }
+
+            if ($request["idUpdate"] && $request["name"] && $request["content"] && $request["profession"] && $request["ancienneImage"]){
+
+                $image = new File("image");
+
+                if($image->isImage()){
+                    $image->upload();
+                    $expert->setImg($image->getName());
+                }
+
+                $expert->setName($request["name"]);
+                $expert->setContent($request["content"]);
+                $expert->setProfession($request["profession"]);
+
+                $this->repository->update($expert);
+
+                return $this->redirect([
+                    "type"=>"admin",
+                    "action"=>"index"
+                ]);
+            }
+        }
+
+        return $this->render("admin/index", [
+            "pageTitle"=>"Index Administrateur",
+            "selecteur"=>"expert",
+            "expert"=>$this->repository->findById($_GET["id"]),
         ]);
     }
     public function remove() {

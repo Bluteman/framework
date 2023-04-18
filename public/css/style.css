@@ -14,6 +14,7 @@
     --white: #ffffff;
     --grey: #808080FF;
     --background: #0B111E;
+    --input-reseaux: #1b2042;
 }
 
 body {
@@ -73,7 +74,7 @@ body {
     height: 60px;
     width: 60px;
     border-radius: 50%;
-    background-color: #1b2042;
+    background-color: var(--input-reseaux);
 }
 
 .bi-linkedin {

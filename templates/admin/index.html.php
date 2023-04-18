@@ -26,7 +26,7 @@
                     <?php foreach ($experts as $expert) { ?>
                         <div class="d-flex justify-content-between align-items-center border border-primary rounded m-2 p-3">
                             <div class="d-flex align-items-center text-center">
-                                <img class="imgProfil m-4" src="./img/<?= $expert->getImg() ?>" alt="image expert">
+                                <img class="imgProfil m-4" src="./img/<?= $expert->getImg() ?>">
                                 <div>
                                     <h3><?= $expert->getName() ?></h3>
                                     <h3><?= $expert->getId() ?></h3>
