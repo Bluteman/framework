@@ -1,4 +1,4 @@
-ErrorDocument 404 /index.php?type=static&action=erreurPage
+ErrorDocument 404 /?type=static&action=erreurPage
 
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
